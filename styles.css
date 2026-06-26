@@ -27,23 +27,22 @@ body {
     z-index: 1;
 }
 
-/* Top-right image widgets */
-.gif-widget {
+/* Top-right image widgets - side by side */
+.widget-row {
     position: fixed;
+    top: 16px;
     right: 16px;
-    width: 180px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     z-index: 5;
+}
+
+.gif-widget {
+    width: 160px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-}
-
-#widget-allmight {
-    top: 16px;
-}
-
-#widget-heroic {
-    top: calc(16px + 180px + 10px); /* AllMight height + gap */
 }
 
 .gif-img {
@@ -254,16 +253,13 @@ body {
         gap: 8px;
     }
 
-    .gif-widget {
-        width: 120px;
-        right: 10px;
-    }
-
-    #widget-allmight {
+    .widget-row {
         top: 10px;
+        right: 10px;
+        gap: 6px;
     }
 
-    #widget-heroic {
-        top: calc(10px + 120px + 8px);
+    .gif-widget {
+        width: 100px;
     }
 }
